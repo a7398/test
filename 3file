@@ -1,0 +1,15 @@
+def area(a, b, c):
+	 if a + b <= c or a + c <= b or b + c <= a:
+        return "Треугольник с такими сторонами не существует"
+     s = (a + b + c) / 2
+     return (s * (s - a ) * (s - b) * (s - c)) ** 0.5
+print(area(a, b, c))  
+pass
+
+
+
+def short_words(text):
+	words = text.split()
+	short_words_list = [word for word in words if len(word) < 5]
+	return short_words_list
+print(short_words(s))

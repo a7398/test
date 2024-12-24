@@ -1,0 +1,15 @@
+import json
+
+def register(login, passwd):
+	try:
+		users = json.load(open('users.json', 'r', encoding='utf-8'))
+	except FileNotFoundError:
+		users = {}
+
+	if login in users:
+		print("Логин уже существует.")
+	else:
+		 users[login] = passwd
+		 json.dump(users, open('users.json', 'w', encoding='utf-8'), ensure_ascii=False)
+		 print("Регистрация успешна.")
+register(input("Логин: "), input("Пароль: "))			
