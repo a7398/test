@@ -1,0 +1,27 @@
+x = int(input("Введите начальную сумму вклада: "))
+y = int(input("Введите желаемую сумму вклада: "))
+x = int(input("Введите процентную ставку: "))
+
+current_amount = x
+years = 0
+while current_amount < y:
+	current_amount = int(current_amount * (1 + p / 100))
+	years +=1
+print("Чтобы вклад достиг суммы", y, "рублей, потребуется", years, "лет.")
+
+
+
+n = int(input("Введите количество повторений: "))
+count = 0
+while count < n:
+	print("for - частный случай цикла while")
+	count +=1
+	
+
+
+number = int(input("Введите целое число: "))
+sum = 0
+while number != 0:
+	sum += number % 10
+	number //= 10
+print("sum")
