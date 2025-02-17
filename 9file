@@ -1,0 +1,7 @@
+import json
+
+class Model:
+    def save(self, filename="data.json"):
+        data = self.__dict__  # Получаем все атрибуты объекта
+        with open(filename, "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
